@@ -15,8 +15,10 @@
             <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdown">
               {% for location in locations %}
               <ul class="dropdown-item">
-                  <li href="/location/{{location.name}}">{{location.name}}</li>
+                  <!-- <li href="/location/{{location.name}}">{{location.name}}</li> -->
+                  <li href="{% url 'location' name=location.name %}">{{location.name}}</li>
               </ul>
+              
 
               {% endfor %}
             </div>
