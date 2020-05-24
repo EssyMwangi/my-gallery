@@ -6,6 +6,12 @@
 
 <div class="container-fluid boded" id="b">
     <div class="container">
+    <p class="text-center intro" style="font-family: 'Josefin Slab', serif;
+    font-size: 50px;
+    color: black;">Welcome to Travel Hub. The available categories include:</p>
+    <p class="text-center ar" style="font-family: 'Josefin Slab', serif;
+    color: black;
+    font-size: 35px;">(City, Main Attraction and Museum)</p>
       <br>
         <div class="row">
             <div class="col-md-7">
@@ -45,8 +51,8 @@
                         <div class="modal-body">
                             <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
                             <p class="imgdesc text-center">{{image.description}}</p>
-                            <span class="btn btn-sm btn-success" >{{image.category}}</span> <a
-                                href="/location/{{image.location}}" class="btn btn-sm btn-info" >{{image.location}}</a>
+                            <span class="btn btn-sm btn-success" >Category:{{image.category}}</span> <a
+                                href="/location/{{image.location}}" class="btn btn-sm btn-info" >Location:{{image.location}}</a>
                         </div>
                         <div class="modal-footer">
                             <input class="form-control input-lg" type="text"
