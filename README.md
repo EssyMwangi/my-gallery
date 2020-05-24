@@ -12,10 +12,10 @@ This is a Django application for personal gallery that allows a user to upload i
 ## Screenshots 
 ###### Home page
  
-<img src="https://user-images.githubusercontent.com/44394821/82762227-82d2c700-9e08-11ea-9c82-728663296521.png">
+<img src="https://user-images.githubusercontent.com/44394821/82762995-fd054a80-9e0c-11ea-86c7-24f5b4dbc14c.png">
  
  ###### Image Details 
- <img src="https://user-images.githubusercontent.com/44394821/82762230-85352100-9e08-11ea-8a29-305833732663.png">
+ <img src="https://user-images.githubusercontent.com/44394821/82762996-fecf0e00-9e0c-11ea-9323-052eace2cbe6.png">
  
 ## User Story  
   
