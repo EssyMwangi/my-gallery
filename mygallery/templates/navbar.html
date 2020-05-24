@@ -16,11 +16,34 @@
             <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdown">
               {% for location in locations %}
               <ul class="dropdown-item">
-                  <li href="/location/{{location.name}}">{{location.name}}</li>
-                 
-              </ul>
-              
+                  <!-- <li href="/location/{{location.name}}">{{location.name}}</li>  -->
+                  <li href="{% url 'location' /location/{{location.name}} %}">{{location.name}}</li>
+                    </ul>
 
+                    {% endfor %}
+                </div>
+            </li>
+        </ul>
+        <!-- Adding a search form  -->
+        <div class="col-sm-4 col-md-4 navbar-right">
+
+            <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search_results' %}">
+
+                <div class="input-group futa">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search Category" aria-label="Search" name="image">
+                    <div class="input-group-btn">
+                        <button class="btn btn-outline my-2 my-sm-0" id="rat" type="submit">Search</button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+        <!-- search form end -->
+    </div>
+</nav>
+
+              </ul>
               {% endfor %}
             </div>
         </li>
