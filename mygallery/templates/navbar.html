@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-dark bg-info navbar-expand-sm " >
   <a class="navbar-brand" href="/"><h3>Tourism Hub</h3></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,50 +6,26 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-md-0">
         <li class="nav-item active">
-          <a class="nav-link home" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle location" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Locations
-          </a>
-            <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdown">
-              {% for location in locations %}
-              <ul class="dropdown-item">
-                  <li><a class="btn btn-info btn-sm" id="btn"
-                    href="/location/{{location.name}}">{{location.name}}</a></li> 
-                  
+                <a class="nav-link home" href="{% url 'photos'%}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle location" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Locations
+              </a>
+                <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdown">
+                    {% for location in locations %}
+                    <ul class="dropdown-item">
+                        <li><a class="btn btn-info btn-sm" id="btn"
+                          href="/location/{{location.name}}">{{location.name}}</a></li>
                     </ul>
 
-              {% endfor %}
-            </div>
-            </li>
-        </ul>
-        <!-- Adding a search form  -->
-        <div class="col-sm-4 col-md-4 navbar-right">
-
-            <form class="form-inline my-2 my-lg-0" role="search" action="{% url 'search_results' %}">
-
-                <div class="input-group futa">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search Category" aria-label="Search" name="image">
-                    <div class="input-group-btn">
-                        <button class="btn btn-outline my-2 my-sm-0" id="rat" type="submit">Search</button>
-                    </div>
-
+                    {% endfor %}
                 </div>
-
-            </form>
-        </div>
-        <!-- search form end -->
-    </div>
-</nav>
-
-              </ul>
-            </div>
-        </li>
+            </li>
       </ul>
       <form class="form-inline my-2 my-md-0"  action="/search" role="search">
-        <input class="form-control mr-bg-6" type="search" placeholder="Search Category(museum,main attraction,city)..." name="imagesearch" aria-label="Search">
-        <button class="btn btn-success btn-md my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search Category" name="imagesearch" aria-label="Search">
+        <button class="btn btn-info btn-md my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
